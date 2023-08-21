@@ -17,9 +17,28 @@ using namespace std;
 
 
 int main(int argc, const char * argv[]) {
-    short beast{665};
-    auto mark_of_the_beast = increment_as_short(&beast);
-    printf("The mark of the beast is %d.\n", mark_of_the_beast);
+    
+    
+    
+//    //templates and casts
+//    const long x[] = { 10, 20 , 30, 40 , 50};
+//    auto const result = mean(x, 5);
+//    printf("result is %ld.\n", result);
+//
+//    const double y[] = { 50.0, -69.456, 128.0 };
+//    auto const result2 = mean(y, 3);
+//    printf("result2 is now %f.\n", result2);
+//
+//    // won't compile because it doesn't satisfy the concepts/constraints we defined for mean()
+//    auto value1 { 0.0 };
+//    auto value2 { 0.0 };
+//    const double* values[] { &value1, &value2 };
+//    mean(values, 2);
+    
+    
+//    short beast{665};
+//    auto mark_of_the_beast = increment_as_short(&beast);
+//    printf("The mark of the beast is %d.\n", mark_of_the_beast);
     
     
 //    polymorphism
