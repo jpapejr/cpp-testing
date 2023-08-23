@@ -19,38 +19,72 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
   
-    // statements
-    size_t iterations{};
-    uint32_t number {123};
-    uint32_t target{99999};
-    while (number != target){
-        randomize(number);
-        ++iterations;
-    }
-    printf("Took %zu iterations to reach %d!\n\n", iterations, target);
     
-    iterations = 0;
-    RandomNumberGenerator rng{42};
-    
-    while (rng.next() != target){
-        
-    }
-    printf("Took %zu iterations to reach target of %d!\n\n", rng.get_iterations(), target);
-    rng.decrement_iterations();
-    printf("One less iteration would be %lu. \n\n", rng.get_iterations());
-
-    auto b = Fruit::Red::Berries::Shnozberry;
-    
-    switch (b) {
-        case Fruit::Red::Berries::Shnozberry:
-            cout << "I like shnozberries!" << endl;
-            break;
-        case Fruit::Red::Berries::Strawberry:
-            cout << "I love strawberries!!" << endl;
-        default:
-            cout << "I'm not a big fan of red berries" << endl;
-            break;
-    }
+//    // statements
+//    size_t iterations{};
+//    uint32_t number {123};
+//    uint32_t target{99999};
+//    while (number != target){
+//        randomize(number);
+//        ++iterations;
+//    }
+//    printf("Took %zu iterations to reach %d!\n\n", iterations, target);
+//
+//    iterations = 0;
+//    RandomNumberGenerator rng{42};
+//
+//    while (rng.next() != target){
+//
+//    }
+//    printf("Took %zu iterations to reach target of %d!\n\n", rng.get_iterations(), target);
+//    rng.decrement_iterations();
+//    printf("One less iteration would be %lu. \n\n", rng.get_iterations());
+//
+//    auto b = Fruit::Red::Berries::Shnozberry;
+//
+//    switch (b) {
+//        case Fruit::Red::Berries::Shnozberry:
+//            cout << "I like shnozberries!" << endl;
+//            break;
+//        case Fruit::Red::Berries::Strawberry:
+//            cout << "I love strawberries!!" << endl;
+//        default:
+//            cout << "I'm not a big fan of red berries" << endl;
+//            break;
+//    }
+//
+//    if (const auto [success, content, size] = read_text_file("./file.txt"); success){
+//        cout << "File content: " << content << endl;
+//        cout << "File size: " << size << endl;
+//    } else {
+//        cout << "Error reading file" << endl;
+//    }
+//
+//
+//    try {
+//        toss_knuckleball();
+//    } catch (std::runtime_error& e){
+//        cout << "Error: " << e.what() << endl;
+//    }
+//
+//    int32_t ui { 10000 };
+//    cout << ui << " is " << sign(ui) << endl;
+//
+//    uint32_t level { 8998 };
+//    auto *power_level = &level;
+//    auto &power_ref = level;
+//
+//    cout << "Power level: " << value_of(power_level) << endl;
+//    ++*power_level;
+//    cout << "Power level: " << value_of(power_ref) << endl;
+//    ++power_ref;
+//    cout << "Power level is " << value_of(level) << "!" << endl;
+//
+//    const int x[] { 1,2,3,4,5,6,7,8,9,10};
+//    for (const auto element : x){
+//        cout << element << endl;
+//    }
+     
     
 //    //expressions
 //    int x{};
