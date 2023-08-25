@@ -14,11 +14,23 @@
 #include "templates.h"
 #include "expressions.h"
 #include "statements.h"
+#include "functions.h"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-  
+    
+    //functions
+    volatile Distillate ethanol;
+    cout << ethanol.apply() << " tequila" << endl;
+    cout << ethanol.apply() << " tequila" << endl;
+    cout << ethanol.apply() << " tequila" << endl;
+    cout << "Floor!" << endl;
+    
+    
+    cout << "Result from the sum() variadic function is " << sum(1, -100) << endl;
+    cout << "Result from the subtract() variadic function is " << subtract(1,2,3,100, -104) << endl;
+    cout << "Result from the print() variadic function is " << print("String1", "String2", "This is a really long string.") << endl;
     
 //    // statements
 //    size_t iterations{};
