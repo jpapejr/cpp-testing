@@ -32,6 +32,11 @@ int main(int argc, const char * argv[]) {
     cout << "Result from the subtract() variadic function is " << subtract(1,2,3,100, -104) << endl;
     cout << "Result from the print() variadic function is " << print("String1", "String2", "This is a really long string.") << endl;
     
+    //function pointer
+    float (*fpointer)(int x, int y){};
+    fpointer = &add;
+    cout << "Function pointer execution result: " << fpointer(1,2) << endl;
+    
 //    // statements
 //    size_t iterations{};
 //    uint32_t number {123};

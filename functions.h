@@ -69,4 +69,10 @@ auto print(T x, Args... args){
     return ss.str();
 }
 
+float add(int x, int y){
+    float result{};
+    result = x + y;
+    return result;
+}
+
 #endif /* functions_h */
