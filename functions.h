@@ -76,3 +76,49 @@ float add(int x, int y){
 }
 
 #endif /* functions_h */
+
+struct CountIf
+{
+    CountIf(char x) : x{x} {}
+    size_t operator()(const char* str) const {
+        size_t index{}, result{};
+        while (str[index]) {
+            if (tolower(str[index]) == tolower(x) ) result++;
+            index++;
+        }
+        return result;
+    }
+
+    private:
+        const char x;
+};
+
+size_t count_spaces(const char* str){
+    size_t index{}, result{};
+    while (str[index]){
+        if (str[index] == ' ') result++;
+        index++;
+    }
+    return result;
+}
+
+std::function<size_t(const char*)> funcs[] {
+    CountIf{ 'e' },
+    count_spaces,
+    [] (const char* str) {
+        size_t index{};
+        while (str[index]) index++;
+        return index;
+    }
+};
+
+template <typename Fn>
+void transform(Fn fn, const int* in, int* out, size_t length){
+    for (size_t i{}; i<length; i++){
+        out[i] = fn(in[i]);
+    }
+}
+
+void static_func() {
+    std::cout << "A static function" << std::endl;
+};
