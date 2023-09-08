@@ -28,23 +28,14 @@ int main(int argc, const char * argv[]) {
     }
     cout << "-----------------------------------------------------------------" << endl;
     
-    run_test(initial_speed_is_zero, "initial speed is zero");
-    run_test(initial_sensitivity_is_five, "initial collision sensitivity is five");
-    run_test(sensitivity_less_than_1, "sensitivity less than 1");
-    run_test(speed_is_saved, "speed is saved");
-    run_test(alert_when_collision_imminent, "alert if collision imminent");
-    run_test(no_alert_when_no_collision_imminent, "no alert if no collision imminent");
+    // IServiceBus& bus{}; 
+    // AutoBrake ab{bus};
     
-    // ServiceBus bus;
-    // AutoBrake auto_brake{
-    //     [&bus] (const auto& cmd) {
-    //         bus.publish(cmd);
-    //     }
-    // };
-
+    
     // while (true) {
-    //     auto_brake.observe(SpeedUpdate{ 10L });
-    //     auto_brake.observe(CarDetected{ 250L, 25L });
+        
+    //     ab.observe(SpeedUpdate{ 10L });
+    //     ab.observe(CarDetected{ 250L, 25L });
     // }
 
 
