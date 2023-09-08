@@ -75,8 +75,6 @@ float add(int x, int y){
     return result;
 }
 
-#endif /* functions_h */
-
 struct CountIf
 {
     CountIf(char x) : x{x} {}
@@ -122,3 +120,5 @@ void transform(Fn fn, const int* in, int* out, size_t length){
 void static_func() {
     std::cout << "A static function" << std::endl;
 };
+
+#endif /* functions_h */
