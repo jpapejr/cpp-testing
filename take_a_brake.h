@@ -94,7 +94,10 @@ struct AutoBrake
     {
         if (x < 1)
             collision_threshold_s = 1;
-        collision_threshold_s = x;
+        else {
+            collision_threshold_s = x;
+        }
+        
     }
     double get_collision_threshold_s()
     {
