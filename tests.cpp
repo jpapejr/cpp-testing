@@ -4,6 +4,7 @@
 
 #include <tuple>
 #include "take_a_brake.h"
+#include <gmock/gmock.h>
 
 double initial_speed_is_zero(){
     MockServiceBus bus{};
