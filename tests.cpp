@@ -1,10 +1,9 @@
-#include <catch2/catch_test_macros.hpp>
-#include <catch2/matchers/catch_matchers_floating_point.hpp>
-#include <catch2/benchmark/catch_benchmark.hpp>
+#include <catch2/catch.hpp>
+#include <HippoMocks/hippomocks.h>
 
 #include <tuple>
 #include "take_a_brake.h"
-#include <gmock/gmock.h>
+
 
 double initial_speed_is_zero(){
     MockServiceBus bus{};

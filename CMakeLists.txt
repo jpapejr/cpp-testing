@@ -3,16 +3,15 @@ project(cpp-testing VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_COLOR_DIAGNOSTICS ON)
 
-find_package(Catch2 3 REQUIRED)
+find_package(Catch2 2 REQUIRED)
 
 include(CTest)
 enable_testing()
 
-cmake_policy(SET CMP0110 NEW )
 
-add_executable(tests tests.cpp)
-target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
-add_test(NAME "Catch2 Tests" COMMAND tests)
+add_executable(Tests tests.cpp)
+target_link_libraries(Tests PRIVATE Catch2::Catch2WithMain)
+add_test(NAME "Catch2 Tests" COMMAND Tests)
 
 
 add_executable(cpp-testing main.cpp)
