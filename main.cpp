@@ -17,16 +17,14 @@
 #include "statements.h"
 #include "functions.h"
 #include "take_a_brake.h"
-
-using namespace std;
-
+#include "smart_pointers.h"
 
 int main(int argc, const char * argv[]) {
-    cout << "-----------------------Program arguments-------------------------" << endl;
+    std::cout << "-----------------------Program arguments-------------------------" << std::endl;
     for (size_t i{}; i<argc; i++){
-        cout << "Arg" << i << " = " << argv[i] << endl;
+        std::cout << "Arg" << i << " = " << argv[i] << std::endl;
     }
-    cout << "-----------------------------------------------------------------" << endl;
+    std::cout << "-----------------------------------------------------------------" << std::endl;
     
     // IServiceBus& bus{}; 
     // AutoBrake ab{bus};
