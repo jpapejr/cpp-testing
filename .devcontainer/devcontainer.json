@@ -5,10 +5,8 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -19,13 +17,20 @@
 			]
 		}
 	}
-
+	// Uncomment this if the devcontainer host container runtime is rootless podman!!
+	// "runArgs": [
+	// 	"--userns=keep-id"
+	// ],
+	// "containerUser": "vscode",
+	// "updateRemoteUserUID": true,
+	// "containerEnv": {
+	// 	"HOME": "/home/vscode"
+	// }
+	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "gcc -v",
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
