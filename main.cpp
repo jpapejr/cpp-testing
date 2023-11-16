@@ -26,6 +26,16 @@ int main(int argc, const char * argv[]) {
     }
     std::cout << "-----------------------------------------------------------------" << std::endl;
     
+    // smart_pointers in chap 11 - custom deleters
+    //below, it's impossible to leak the file handler
+    //because the FileGuard object is deleted properly (and closed) after
+    // say_hello() completes
+    auto file = fopen("HAL9000", "w");
+    if (!file) return errno;
+    FileGuard file_guard { file, fclose};
+    say_hello(std::move(file_guard));
+
+
     // IServiceBus& bus{}; 
     // AutoBrake ab{bus};
     

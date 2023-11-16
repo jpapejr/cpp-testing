@@ -8,7 +8,10 @@
 #define smart_pointers_h
 
 #include <boost/smart_ptr/scoped_ptr.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
 #include <iostream>
+#include <memory>
+#include <cstdio>
 
 struct DeadMenOfDunharrow{
     const char* message;
@@ -22,7 +25,19 @@ struct DeadMenOfDunharrow{
 };
 int DeadMenOfDunharrow::oaths_to_fulfill{};
 
-using ScopedOathBreakers = boost::scoped_ptr<DeadMenOfDunharrow>;
+// using ScopedOathBreakers = boost::scoped_ptr<DeadMenOfDunharrow>;
+using ScopedOathBreakers = std::unique_ptr<DeadMenOfDunharrow>;
+using SharedOathBreakers = std::shared_ptr<DeadMenOfDunharrow>;
 
+
+// using FileGuard = std::unique_ptr<FILE, int(*)(FILE*)>;
+using FileGuard = std::shared_ptr<FILE>; //uses shared_
+
+void say_hello(FileGuard file){
+    fprintf(file.get(), "HELLO, DAVE");
+}
+
+auto my_shared_ptr = std::make_shared<int>(808);
+std::weak_ptr<int> wp { my_shared_ptr };
 
 #endif
