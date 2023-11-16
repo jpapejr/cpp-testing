@@ -18,16 +18,18 @@
 				"streetsidesoftware.code-spell-checker"
 			]
 		}
-	}
+	},
 	// Uncomment this if the devcontainer host container runtime is rootless podman!!
-	// "runArgs": [
-	// 	"--userns=keep-id"
-	// ],
-	// "containerUser": "vscode",
-	// "updateRemoteUserUID": true,
-	// "containerEnv": {
-	// 	"HOME": "/home/vscode"
-	// }
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+	"workspaceFolder": "/workspace",
+	"runArgs": [
+		"--userns=keep-id"
+	],
+	"containerUser": "vscode",
+	"updateRemoteUserUID": true,
+	"containerEnv": {
+		"HOME": "/home/vscode"
+	}
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
