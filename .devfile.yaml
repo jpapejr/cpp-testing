@@ -1,0 +1,16 @@
+schemaVersion: 2.2.0
+metadata:
+  name: cpp-testing
+  displayName: cpp-testing
+components:
+  - name: tools
+    container:
+      image: ghcr.io/jpapejr/cpp-testing:latest
+      command: ["sleep","infinity"]
+      mountSources: true
+  - name: moasc
+    container:
+      image: ghcr.io/jpapejr/moasc:latest
+      command: ["sleep","infinity"]
+      mountSources: true
+      
