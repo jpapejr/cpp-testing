@@ -2,9 +2,15 @@ cmake_minimum_required(VERSION 3.5.0)
 project(cpp-testing VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_COLOR_DIAGNOSTICS ON)
+set(CMAKE_TOOLCHAIN_FILE /home/tooling/vcpkg/scripts/buildsystems/vcpkg.cmake)
+set(VCPKG_ROOT /home/tooling/vcpkg)
+include_directories(${VCPKG_ROOT}/installed/x64-linux/include)
+link_directories(${VCPKG_ROOT}/installed/x64-linux/lib)
 
 
-find_package(Catch2 2 REQUIRED)
+set(Catch2_DIR ${VCPKG_ROOT}/installed/x64-linux/share/catch2)
+find_package(Catch2 CONFIG REQUIRED)
+set(Boost_INCLUDE_DIR ${VCPKG_ROOT}/installed/x64-linux/include)
 find_package(Boost REQUIRED)
 
 include(CTest)

@@ -1,6 +1,6 @@
-#include <catch2/catch.hpp>
-#include <HippoMocks/hippomocks.h>
+#define CATCH_CONFIG_MAIN
 
+#include <catch.hpp>
 #include <tuple>
 #include "take_a_brake.h"
 
