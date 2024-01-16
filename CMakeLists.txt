@@ -3,9 +3,10 @@ project(cpp-testing VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_COLOR_DIAGNOSTICS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_TOOLCHAIN_FILE /home/tooling/vcpkg/scripts/buildsystems/vcpkg.cmake)
-set(VCPKG_ROOT /Users/jtp/Code/vcpkg)
-set(VCPKG_TARGET_TRIPLET arm64-osx)
+set(VCPKG_ROOT /home/jtp.linux/vcpkg)
+set(CMAKE_TOOLCHAIN_FILE ${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+
+set(VCPKG_TARGET_TRIPLET x64-linux)
 include_directories(${VCPKG_ROOT}/installed/${VCPKG_TARGET_TRIPLET}/include)
 link_directories(${VCPKG_ROOT}/installed/${VCPKG_TARGET_TRIPLET}/lib)
 
